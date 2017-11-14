@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html class="no-js fullbg" lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://techitvn.com/xmlrpc.php" />
+<title>Hướng dẫn sử dụng api smartcity &#8211; Techitvn</title>
+
+	  
+	<!-- Meta Tag Manager -->
+	<meta name="google-site-verification" content="J6NmOtif3nWSd82yymv2rdjFZnuhgHa0XLyDVxYkW-8" />
+	<!-- / Meta Tag Manager -->
+<link rel='dns-prefetch' href='//w.sharethis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin Techitvn &raquo;" href="http://techitvn.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi Techitvn &raquo;" href="http://techitvn.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/techitvn.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='ssbaFont-css'  href='//fonts.googleapis.com/css?family=Indie+Flower&#038;ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='social_comments_rtl-css'  href='http://techitvn.com/wp-content/plugins/social-comments/assets/css/social_comments.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='social-widget-css'  href='http://techitvn.com/wp-content/plugins/social-media-widget/social_widget.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='http://techitvn.com/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mh-magazine-lite-css'  href='http://techitvn.com/wp-content/themes/mh-magazine-lite/style.css?ver=2.3.9' type='text/css' media='all' />
+<link rel='stylesheet' id='mh-techmagazine-css'  href='http://techitvn.com/wp-content/themes/mh-techmagazine/style.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='mh-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,600' type='text/css' media='all' />
+<link rel='stylesheet' id='mh-font-awesome-css'  href='http://techitvn.com/wp-content/themes/mh-magazine-lite/includes/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='A2A_SHARE_SAVE-css'  href='http://techitvn.com/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.14' type='text/css' media='all' />
+<style id='A2A_SHARE_SAVE-inline-css' type='text/css'>
+@media screen and (max-width:980px){
+.a2a_floating_style.a2a_vertical_style{display:none;}
+}
+</style>
+<script type='text/javascript' src='http://techitvn.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.0'></script>
+<script id='st_insights_js' type='text/javascript' src='http://w.sharethis.com/button/st_insights.js?publisher=4d48b7c5-0ae3-43d4-bfbe-3ff8c17a8ae6&#038;product=simpleshare'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/themes/mh-magazine-lite/js/scripts.js?ver=4.8.2'></script>
+<link rel='https://api.w.org/' href='http://techitvn.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://techitvn.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://techitvn.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.2" />
+<link rel="canonical" href="http://techitvn.com/huong-dan-su-dung-api-smartcity/" />
+<link rel='shortlink' href='http://techitvn.com/?p=1728' />
+<link rel="alternate" type="application/json+oembed" href="http://techitvn.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://techitvn.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&#038;format=xml" />
+
+<script type="text/javascript">
+var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.templates=a2a_config.templates||{};a2a_localize = {
+	Share: "Share",
+	Save: "Save",
+	Subscribe: "Subscribe",
+	Email: "Email",
+	Bookmark: "Bookmark",
+	ShowAll: "Show all",
+	ShowLess: "Show less",
+	FindServices: "Find service(s)",
+	FindAnyServiceToAddTo: "Instantly find any service to add to",
+	PoweredBy: "Powered by",
+	ShareViaEmail: "Share via email",
+	SubscribeViaEmail: "Subscribe via email",
+	BookmarkInYourBrowser: "Bookmark in your browser",
+	BookmarkInstructions: "Press Ctrl+D or \u2318+D to bookmark this page",
+	AddToYourFavorites: "Add to your favorites",
+	SendFromWebOrProgram: "Send from any email address or email program",
+	EmailProgram: "Email program",
+	More: "More&#8230;"
+};
+
+a2a_config.onclick=1;
+</script>
+<script type="text/javascript" src="https://static.addtoany.com/menu/page.js" async="async"></script>
+<script>(function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));</script><style type="text/css">	.ssba {
+									
+									
+									
+									
+								}
+								.ssba img
+								{
+									width: 35px !important;
+									padding: 6px;
+									border:  0;
+									box-shadow: none !important;
+									display: inline !important;
+									vertical-align: middle;
+								}
+								.ssba, .ssba a
+								{
+									text-decoration:none;
+									border:0;
+									background: none;
+									font-family: Indie Flower;
+									font-size: 	20px;
+									
+									font-weight: bold;
+								}
+								</style><meta property="fb:app_id" content="565240037016371"/><script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://techitvn.com/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.4';
+	window._wp_rp_post_id = '1728';
+	window._wp_rp_num_rel_posts = '5';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'H%C6%B0%E1%BB%9Bng+d%E1%BA%ABn+s%E1%BB%AD+d%E1%BB%A5ng+api+smartcity';
+	window._wp_rp_post_tags = [];
+	window._wp_rp_promoted_content = true;
+</script>
+<link rel="stylesheet" href="http://techitvn.com/wp-content/plugins/wordpress-23-related-posts-plugin/static/themes/vertical-s.css?version=3.6.4" />
+	<script id="wpcp_disable_Right_Click" type="text/javascript">
+	//<![CDATA[
+	document.ondragstart = function() { return false;}
+	/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Disable context menu on images by GreenLava Version 1.0
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+	    function nocontext(e) {
+	       return false;
+	    }
+	    document.oncontextmenu = nocontext;
+	//]]>
+	</script>
+<meta name="google-site-verification" content="l5J3CmHYdndOp4EapovgUWEgTOQQ0hWLddY8zUbGXJw" /><meta name="google-site-verification" content="Pgfo-afrmlvnYdxVHydmAnfW2URaOHGODkx6l9618F0" /><!--[if lt IE 9]>
+<script src="http://techitvn.com/wp-content/themes/mh-magazine-lite/js/css3-mediaqueries.js"></script>
+<![endif]-->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="http://techitvn.com/wp-content/uploads/2016/11/cropped-dffdf-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="http://techitvn.com/wp-content/uploads/2016/11/cropped-dffdf-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://techitvn.com/wp-content/uploads/2016/11/cropped-dffdf-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://techitvn.com/wp-content/uploads/2016/11/cropped-dffdf-1-270x270.jpg" />
+<style id="tt-easy-google-font-styles" type="text/css">p { font-family: 'Arial'; font-style: normal; font-weight: 400; }
+h1 { font-family: 'Arial'; font-style: normal; font-weight: 700; }
+h2 { font-family: 'Arial'; font-style: normal; font-weight: 400; text-decoration: none; }
+h3 { font-family: 'Arial'; font-style: normal; font-weight: 700; }
+h4 { font-family: 'Arial'; font-style: normal; font-weight: 700; }
+h5 { font-family: 'Arial'; font-style: normal; font-weight: 400; }
+h6 { font-family: 'Arial'; font-style: normal; font-weight: 400; }
+</style><meta data-pso-pv="1.2.1" data-pso-pt="page" data-pso-th="ee5238c854ec10630be4c3dfe3d7f188"></head>
+<body id="mh-mobile" class="page-template-default page page-id-1728 custom-background none mh-right-sb">
+<div class="mh-header-mobile-nav clearfix"></div>
+<header class="mh-header">
+	<div class="mh-container mh-container-inner mh-row clearfix">
+		<div class="mh-custom-header clearfix">
+</div>
+	</div>
+	<div class="mh-main-nav-wrap">
+		<nav class="mh-navigation mh-main-nav mh-container mh-container-inner clearfix">
+			<div class="menu-menu01-container"><ul id="menu-menu01" class="menu"><li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4"><a title="Trang chủ" href="http://techitvn.com/">Trang Chủ</a></li>
+<li id="menu-item-443" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-443"><a href="http://techitvn.com/category/khai-thac/">Khai thác</a></li>
+<li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6"><a title="Web develop" href="http://techitvn.com/category/lap-trinh-web/">Web develop</a>
+<ul  class="sub-menu">
+	<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://techitvn.com/category/php/">PHP</a></li>
+	<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="http://techitvn.com/category/javascript/">JavaScript</a></li>
+</ul>
+</li>
+<li id="menu-item-1523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1523"><a href="http://techitvn.com/category/linux/">Linux</a></li>
+<li id="menu-item-1526" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1526"><a href="http://techitvn.com/category/tai-lieu/">Tài liệu</a></li>
+<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a title="Phần mềm" href="http://techitvn.com/category/app-tools/">App&#038;Tools</a></li>
+<li id="menu-item-181" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181"><a title="Thủ thuật" href="http://techitvn.com/category/thu-thuat/">Thủ thuật</a></li>
+<li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183"><a title="Giới thiệu" href="http://techitvn.com/cv">Giới thiệu</a></li>
+</ul></div>		</nav>
+	</div>
+</header><div class="mh-container mh-container-outer">
+<div class="mh-wrapper clearfix">
+    <div id="main-content" class="mh-content"><article id="page-1728" class="post-1728 page type-page status-publish hentry">
+	<header class="entry-header">
+		<h1 class="entry-title page-title">
+			Hướng dẫn sử dụng api smartcity		</h1>
+	</header>
+	<div class="entry-content clearfix">
+		<h3>API tĩnh (chỉ đọc):</h3>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/cauhinh.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/cauhinh.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/chedo.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/chedo.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/congtrinh.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/congtrinh.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/congtrinhinfo.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/congtrinhinfo.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/denduong.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/denduong.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/dentag.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/dentag.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/node.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/node.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/nodeinfo.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/nodeinfo.php</a></p>
+<p style="padding-left: 30px;"><a href="http://techitvn.com/smartcity/api/phanhoi.php" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/phanhoi.php</a></p>
+<p style="padding-left: 30px;"><strong>Đăng nhập thông qua http request :</strong></p>
+<p style="padding-left: 60px;">http://techitvn.com/smartcity/api/userlogin.php?name={your_username}&#038;password={your_password}</p>
+<p style="padding-left: 60px;"><em>Ví dụ</em>:</p>
+<p style="padding-left: 60px;"><a href="http://techitvn.com/smartcity/api/userlogin.php?name=minhduc&amp;password=01689470862" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/userlogin.php?name=minhduc&amp;password=01689470862</a></p>
+<p style="padding-left: 60px;">Nếu đăng nhập thành công json trả về : {&#8220;status&#8221;:&#8221;true&#8221;} và ngược lại {&#8220;status&#8221;:&#8221;false&#8221;}</p>
+<h3>API động (Ghi vào csdl)</h3>
+<p style="padding-left: 30px;">http://techitvn.com/smartcity/api/action.php?sql={your_query}</p>
+<p style="padding-left: 30px;"><strong>Chèn vào một bảng:</strong></p>
+<p style="padding-left: 60px;"><em>Ví dụ:</em></p>
+<p style="padding-left: 60px;"><a href="http://techitvn.com/smartcity/api/action.php?sql=INSERT INTO phanhoi VALUES('6','duc','duc@gmail.com','01689470862','Ok','0')"> http://techitvn.com/smartcity/api/action.php?sql=INSERT INTO phanhoi VALUES(&#8216;6&#8242;,&#8217;duc&#8217;,&#8217;duc@gmail.com&#8217;,&#8217;01689470862&#8242;,&#8217;Ok&#8217;,&#8217;0&#8242;)</a></p>
+<p style="padding-left: 60px;">nếu INSERT thành công json trả về: {&#8220;status&#8221;:&#8221;true&#8221;}, ngược lại nếu dữ lại đã tồn tại hoặc lỗi: {&#8220;status&#8221;:&#8221;false&#8221;}</p>
+<p style="padding-left: 30px;"><strong>Thêm 1 cột vào bảng:</strong></p>
+<p style="padding-left: 30px;"><em>Ví dụ:</em></p>
+<p style="padding-left: 60px;"><a href="http://techitvn.com/smartcity/api/action.php?sql=ALTER TABLE phanhoi ADD XacNhan int(1)" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/action.php?sql=ALTER TABLE phanhoi ADD XacNhan int(1)</a></p>
+<p style="padding-left: 30px;"><strong>Cập nhật:</strong></p>
+<p style="padding-left: 30px;"><em>Ví dụ:</em></p>
+<p style="padding-left: 60px;"><a href="http://techitvn.com/smartcity/api/action.php?sql=UPDATE phanhoi SET XacNhan = 1 WHERE XacNhan IS NULL" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/action.php?sql=UPDATE phanhoi SET XacNhan = 1 WHERE XacNhan IS NULL</a></p>
+<p style="padding-left: 30px;"><strong>Xóa:</strong></p>
+<p style="padding-left: 30px;"><em>Ví dụ:</em></p>
+<p style="padding-left: 60px;"><a href="http://techitvn.com/smartcity/api/action.php?sql=ALTER TABLE phanhoi DROP XacNhan" target="_blank" rel="noopener">http://techitvn.com/smartcity/api/action.php?sql=ALTER TABLE phanhoi DROP XacNhan</a></p>
+<div class="addtoany_share_save_container addtoany_content_bottom"><div class="addtoany_header">Share on:</div><div class="a2a_kit a2a_kit_size_16 addtoany_list" data-a2a-url="http://techitvn.com/huong-dan-su-dung-api-smartcity/" data-a2a-title="Hướng dẫn sử dụng api smartcity"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_plus_share addtoany_special_service" data-annotation="none" data-href="http://techitvn.com/huong-dan-su-dung-api-smartcity/"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_facebook_messenger" href="https://www.addtoany.com/add_to/facebook_messenger?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Facebook Messenger" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_bookmarks" href="https://www.addtoany.com/add_to/google_bookmarks?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Google Bookmarks" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_hacker_news" href="https://www.addtoany.com/add_to/hacker_news?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Hacker News" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/share_16_16.png" alt="Share"></a></div></div>	</div>
+</article>	</div>
+	<aside class="mh-widget-col-1 mh-sidebar"><div id="text-20" class="mh-widget widget_text"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Tìm kiếm</span></h4>			<div class="textwidget"><script>
+  (function() {
+    var cx = '008930635375488533764:cs8s37_dpv4';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search></div>
+		</div><div id="ssba_widget-3" class="mh-widget widget_ssba_widget"><!-- Simple Share Buttons Adder (6.3.6) simplesharebuttons.com --><div class="ssba ssba-wrap"><div style="text-align:left"><a data-site="" class="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u=http://techitvn.com/huong-dan-su-dung-api-smartcity/"  target="_blank" ><img src="http://techitvn.com/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/facebook.png" title="Facebook" class="ssba ssba-img" alt="Share on Facebook" /></a><a data-site="" class="ssba_twitter_share" href="http://twitter.com/share?url=http://techitvn.com/huong-dan-su-dung-api-smartcity/&amp;text=H%C6%B0%E1%BB%9Bng+d%E1%BA%ABn+s%E1%BB%AD+d%E1%BB%A5ng+api+smartcity+"  target="_blank" ><img src="http://techitvn.com/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/twitter.png" title="Twitter" class="ssba ssba-img" alt="Tweet about this on Twitter" /></a><a data-site="" class="ssba_google_share" href="https://plus.google.com/share?url=http://techitvn.com/huong-dan-su-dung-api-smartcity/"  target="_blank" ><img src="http://techitvn.com/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/google.png" title="Google+" class="ssba ssba-img" alt="Share on Google+" /></a><a data-site="linkedin" class="ssba_linkedin_share ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://techitvn.com/huong-dan-su-dung-api-smartcity/"  target="_blank" ><img src="http://techitvn.com/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/linkedin.png" title="LinkedIn" class="ssba ssba-img" alt="Share on LinkedIn" /></a></div></div></div><div id="text-37" class="mh-widget widget_text">			<div class="textwidget"><iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2Fminhduc2521997&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:30px;" allowTransparency="true"></iframe></div>
+		</div><div id="text-39" class="mh-widget widget_text">			<div class="textwidget"><p><center>Visitors: 41534</center></p>
+</div>
+		</div>		<div id="recent-posts-2" class="mh-widget widget_recent_entries">		<h4 class="mh-widget-title"><span class="mh-widget-title-inner">MỚI NHẤT</span></h4>		<ul>
+					<li>
+				<a href="http://techitvn.com/2017/09/22/php-ket-noi-co-so-du-lieu-mysqli/">PHP &#8211; Kết nối cơ sở dữ liệu Mysqli</a>
+							<span class="post-date">22 Tháng Chín, 2017</span>
+						</li>
+					<li>
+				<a href="http://techitvn.com/2017/08/28/javascript-chia-map-anh-ket-hop-usemap/">Javascript &#8211; Chia map ảnh kết hợp usemap</a>
+							<span class="post-date">28 Tháng Tám, 2017</span>
+						</li>
+					<li>
+				<a href="http://techitvn.com/2017/08/26/javascript-events/">Javascript &#8211; Events</a>
+							<span class="post-date">26 Tháng Tám, 2017</span>
+						</li>
+					<li>
+				<a href="http://techitvn.com/2017/08/16/php-su-dung-ham-array_rand/">PHP &#8211; Sử dụng hàm array_rand()</a>
+							<span class="post-date">16 Tháng Tám, 2017</span>
+						</li>
+					<li>
+				<a href="http://techitvn.com/2017/06/22/danh-cap-username-password-database-cua-1-trang-web/">Đánh cắp Username, Password Database của 1 trang Web</a>
+							<span class="post-date">22 Tháng Sáu, 2017</span>
+						</li>
+				</ul>
+		</div>		<div id="mh_custom_posts-7" class="mh-widget mh_custom_posts"><h4 class="mh-widget-title"><span class="mh-widget-title-inner"><a href="http://techitvn.com/category/php/" class="mh-widget-title-link">PHP</a></span></h4>			<ul class="mh-custom-posts-widget clearfix">					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/09/22/php-ket-noi-co-so-du-lieu-mysqli/" title="PHP &#8211; Kết nối cơ sở dữ liệu Mysqli"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/09/PHP-Kết-nối-cơ-sở-dữ-liệu-Mysqli-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/09/PHP-Kết-nối-cơ-sở-dữ-liệu-Mysqli-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/09/PHP-Kết-nối-cơ-sở-dữ-liệu-Mysqli-678x509.jpg 678w, http://techitvn.com/wp-content/uploads/2017/09/PHP-Kết-nối-cơ-sở-dữ-liệu-Mysqli-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/09/22/php-ket-noi-co-so-du-lieu-mysqli/" title="PHP &#8211; Kết nối cơ sở dữ liệu Mysqli">
+									PHP &#8211; Kết nối cơ sở dữ liệu Mysqli								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>22 Tháng Chín, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/09/22/php-ket-noi-co-so-du-lieu-mysqli/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/08/16/php-su-dung-ham-array_rand/" title="PHP &#8211; Sử dụng hàm array_rand()"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/08/array_rand-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/08/array_rand-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/08/array_rand-678x509.jpg 678w, http://techitvn.com/wp-content/uploads/2017/08/array_rand-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/08/16/php-su-dung-ham-array_rand/" title="PHP &#8211; Sử dụng hàm array_rand()">
+									PHP &#8211; Sử dụng hàm array_rand()								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>16 Tháng Tám, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/08/16/php-su-dung-ham-array_rand/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/06/05/php-su-khac-biet-giua-print-vs-echo/" title="PHP &#8211; Sự khác biệt giữa &#8220;print&#8221; và &#8220;echo&#8221;"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/06/print-and-echo-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/06/print-and-echo-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/06/print-and-echo-678x509.jpg 678w, http://techitvn.com/wp-content/uploads/2017/06/print-and-echo-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/06/05/php-su-khac-biet-giua-print-vs-echo/" title="PHP &#8211; Sự khác biệt giữa &#8220;print&#8221; và &#8220;echo&#8221;">
+									PHP &#8211; Sự khác biệt giữa &#8220;print&#8221; và &#8220;echo&#8221;								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>5 Tháng Sáu, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/06/05/php-su-khac-biet-giua-print-vs-echo/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/05/17/php-cookie-va-session/" title="PHP &#8211; Cookie và Session"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/05/Cookie-and-Session-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/05/Cookie-and-Session-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/05/Cookie-and-Session-678x509.jpg 678w, http://techitvn.com/wp-content/uploads/2017/05/Cookie-and-Session-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/05/17/php-cookie-va-session/" title="PHP &#8211; Cookie và Session">
+									PHP &#8211; Cookie và Session								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>17 Tháng Năm, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/05/17/php-cookie-va-session/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>        	</ul></div><div id="mh_custom_posts-13" class="mh-widget mh_custom_posts"><h4 class="mh-widget-title"><span class="mh-widget-title-inner"><a href="http://techitvn.com/category/javascript/" class="mh-widget-title-link">Javascript</a></span></h4>			<ul class="mh-custom-posts-widget clearfix">					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/08/28/javascript-chia-map-anh-ket-hop-usemap/" title="Javascript &#8211; Chia map ảnh kết hợp usemap"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/08/chia_map_anh_ket_hop_usemap-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/08/chia_map_anh_ket_hop_usemap-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/08/chia_map_anh_ket_hop_usemap-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/08/28/javascript-chia-map-anh-ket-hop-usemap/" title="Javascript &#8211; Chia map ảnh kết hợp usemap">
+									Javascript &#8211; Chia map ảnh kết hợp usemap								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>28 Tháng Tám, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/08/28/javascript-chia-map-anh-ket-hop-usemap/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/08/26/javascript-events/" title="Javascript &#8211; Events"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/08/Javascript-Events-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/08/Javascript-Events-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/08/Javascript-Events-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/08/26/javascript-events/" title="Javascript &#8211; Events">
+									Javascript &#8211; Events								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>26 Tháng Tám, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/08/26/javascript-events/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/04/26/javascript-chuyen-dong/" title="Javascript – Chuyển động"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/04/Javascript-chuyển-động-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/04/Javascript-chuyển-động-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/04/Javascript-chuyển-động-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/04/26/javascript-chuyen-dong/" title="Javascript – Chuyển động">
+									Javascript – Chuyển động								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>26 Tháng Tư, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/04/26/javascript-chuyen-dong/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/04/26/javascript-lay-vi-tri-con-tro/" title="Javascript – Lấy vị trí con trỏ"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/04/Mouse-position-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/04/Mouse-position-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/04/Mouse-position-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/04/26/javascript-lay-vi-tri-con-tro/" title="Javascript – Lấy vị trí con trỏ">
+									Javascript – Lấy vị trí con trỏ								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>26 Tháng Tư, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/04/26/javascript-lay-vi-tri-con-tro/#mh-comments">1</a></span>
+							</div>
+						</header>
+					</li>        	</ul></div><div id="mh_custom_posts-6" class="mh-widget mh_custom_posts"><h4 class="mh-widget-title"><span class="mh-widget-title-inner"><a href="http://techitvn.com/category/c/" class="mh-widget-title-link">C++</a></span></h4>			<ul class="mh-custom-posts-widget clearfix">					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2017/03/14/co-ban-ve-de-quy/" title="Cơ bản về đệ quy"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2017/03/đệ-quy-index-80x60.jpg" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2017/03/đệ-quy-index-80x60.jpg 80w, http://techitvn.com/wp-content/uploads/2017/03/đệ-quy-index-326x245.jpg 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2017/03/14/co-ban-ve-de-quy/" title="Cơ bản về đệ quy">
+									Cơ bản về đệ quy								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>14 Tháng Ba, 2017</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2017/03/14/co-ban-ve-de-quy/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2016/11/04/dung-native-windows-api-viet-chuong-trinh-khoa-man-hinh-windown-bang-c/" title="Dùng Native Windows API viết chương trình khóa màn hình Windown bằng C++"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2016/11/fdf-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" srcset="http://techitvn.com/wp-content/uploads/2016/11/fdf-80x60.png 80w, http://techitvn.com/wp-content/uploads/2016/11/fdf-678x509.png 678w, http://techitvn.com/wp-content/uploads/2016/11/fdf-326x245.png 326w" sizes="(max-width: 80px) 100vw, 80px" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2016/11/04/dung-native-windows-api-viet-chuong-trinh-khoa-man-hinh-windown-bang-c/" title="Dùng Native Windows API viết chương trình khóa màn hình Windown bằng C++">
+									Dùng Native Windows API viết chương trình khóa màn hình Windown bằng C++								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>4 Tháng Mười Một, 2016</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2016/11/04/dung-native-windows-api-viet-chuong-trinh-khoa-man-hinh-windown-bang-c/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2016/10/18/nap-chong-trong-c/" title="Nạp chồng trong C++"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2016/10/unnamed-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2016/10/18/nap-chong-trong-c/" title="Nạp chồng trong C++">
+									Nạp chồng trong C++								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>18 Tháng Mười, 2016</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2016/10/18/nap-chong-trong-c/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>					<li class="mh-custom-posts-item mh-custom-posts-small clearfix">
+						<div class="mh-custom-posts-thumb">
+							<a href="http://techitvn.com/2016/10/18/phuong-thuc-ao-virtual-tinh-da-hinh-trong-c/" title="Phương thức ảo VIRTUAL (Tính đa hình) trong C++"><img width="80" height="60" src="http://techitvn.com/wp-content/uploads/2016/10/unnamed-80x60.png" class="attachment-mh-magazine-lite-small size-mh-magazine-lite-small wp-post-image" alt="" />							</a>
+						</div>
+						<header class="mh-custom-posts-header">
+							<p class="mh-custom-posts-small-title">
+								<a href="http://techitvn.com/2016/10/18/phuong-thuc-ao-virtual-tinh-da-hinh-trong-c/" title="Phương thức ảo VIRTUAL (Tính đa hình) trong C++">
+									Phương thức ảo VIRTUAL (Tính đa hình) trong C++								</a>
+							</p>
+							<div class="mh-meta mh-custom-posts-meta">
+								<span class="mh-meta-date updated"><i class="fa fa-clock-o"></i>18 Tháng Mười, 2016</span>
+<span class="mh-meta-comments"><i class="fa fa-comment-o"></i><a class="mh-comment-count-link" href="http://techitvn.com/2016/10/18/phuong-thuc-ao-virtual-tinh-da-hinh-trong-c/#mh-comments">0</a></span>
+							</div>
+						</header>
+					</li>        	</ul></div><div id="yop_poll_widget-3" class="mh-widget Yop Poll Widget"><h4 class="mh-widget-title"><span class="mh-widget-title-inner">Vote</span></h4><style scoped>/*
+  Main Container
+  ---------------------------------------------------------------------------
+*/
+#yop-poll-other-answer-1_yp59d390790ee6e-other {
+    border:1px solid #000000;
+    color:#000000;
+}
+.yop-poll-customfield-1_yp59d390790ee6e {
+border:1px solid #000000;
+    color:#000000;
+}
+div#yop-poll-container-1_yp59d390790ee6e {
+  background:#fff;
+  box-sizing: border-box;
+  color: #555;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px;
+  width: 200px;
+  zoom: 1;
+}
+/* A nice little reset */
+div.yop-poll-container * {
+
+}
+
+form#yop-poll-form-1_yp59d390790ee6e {
+
+}
+/*
+  Error message
+  ..................................
+*/
+div#yop-poll-container-error-1_yp59d390790ee6e {
+  font-size:.8em;
+  font-style:italic;
+  color:red;
+  text-transform:lowercase;
+  text-align:center;
+}
+/*
+  Success message
+  ..................................
+*/
+div#yop-poll-container-success-1_yp59d390790ee6e {
+  font-size:.8em;
+  font-style:italic;
+  color:green;
+  text-align:center;
+}
+/*
+  Poll Question
+  ---------------------------------------------------------------------------
+*/
+div#yop-poll-questions-container-1_yp59d390790ee6e { margin:.5em; }
+div.yop-poll-question-container-1_yp59d390790ee6e { margin: 0; }
+div.yop-poll-question-1_yp59d390790ee6e {
+  border: 0 none;
+  margin: 0 0 2em;
+  padding: .25em;
+  text-align: center;
+  font-size: 14px;
+}
+/*
+  Poll Options / Answers
+  ---------------------------------------------------------------------------
+*/
+div.yop-poll-answers-1_yp59d390790ee6e {}
+div.yop-poll-answers-1_yp59d390790ee6e ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+div.yop-poll-answers-1_yp59d390790ee6e ul li.yop-poll-li-answer-1_yp59d390790ee6e,
+div.yop-poll-answers-1_yp59d390790ee6e ul li.yop-poll-li-result-1_yp59d390790ee6e {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 2em;
+
+}
+div.yop-poll-answers-1_yp59d390790ee6e ul li.yop-poll-li-result-1_yp59d390790ee6e {padding-bottom: 1em;}
+/*
+  Label
+  ..................................
+*/
+div.yop-poll-answers-1_yp59d390790ee6e  ul li.yop-poll-li-answer-1_yp59d390790ee6e label {
+  margin:0px;
+  font-style:normal;
+  font-weight:normal;
+  font-size:14px;
+  float:none;
+  display:inline-block;
+}
+/* Actual text label of the answer */
+div.yop-poll-answers-1_yp59d390790ee6e  ul li.yop-poll-li-answer-1_yp59d390790ee6e label:nth-of-type(2) {
+
+}
+/*
+  Custom answer / Other
+  ..................................
+*/
+div.yop-poll-answers-1_yp59d390790ee6e  ul li.yop-poll-li-answer-1_yp59d390790ee6e label:nth-of-type(3) {
+  width: 100%;
+  overflow: hidden;
+}
+div#yop-poll-container-1_yp59d390790ee6e  li.yop-poll-li-answer-1_yp59d390790ee6e label:nth-of-type(3) input[type="text"] {
+  width: 94%;
+  overflow: hidden;
+}
+/*
+  Custom checkbox and radio button style
+  ---------------------------------------------------------------------------
+*/
+
+
+/*
+  Custom fields
+  ---------------------------------------------------------------------------
+*/
+div.yop-poll-customs-1_yp59d390790ee6e {
+  clear: both;
+
+}
+div.yop-poll-customs-1_yp59d390790ee6e ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+div.yop-poll-customs-1_yp59d390790ee6e ul li.yop-poll-li-custom-1_yp59d390790ee6e {
+  display: block;
+  font-size:14px;
+  list-style: none;
+}
+div.yop-poll-customs-1_yp59d390790ee6e ul li.yop-poll-li-custom-1_yp59d390790ee6e label {
+  display: block;
+}
+div#yop-poll-container-1_yp59d390790ee6e li.yop-poll-li-custom-1_yp59d390790ee6e input[type="text"] {
+  width: 94%;
+}
+/*
+  Vote Button
+  ---------------------------------------------------------------------------
+*/
+.yop-poll-footer { /*height: 4em;*/ }
+
+.yop-poll-vote-centered-1_yp59d390790ee6e { text-align:center; }
+
+#yop-poll-vote-1_yp59d390790ee6e div button {
+
+  cursor:pointer;
+  display: block;
+  font-size:14px;
+  margin: 0 auto;
+  }
+
+
+#yop-poll-vote-1_yp59d390790ee6e div button.yop_poll_vote_button {}
+#yop-poll-vote-1_yp59d390790ee6e div button.yop_poll_wordpress_vote_button { margin: 1em auto 0; }
+#yop-poll-vote-1_yp59d390790ee6e div button.yop_poll_anonymous_vote_button { margin: 1em auto 0; }
+
+/*
+  Results
+  ---------------------------------------------------------------------------
+*/
+
+li.yop-poll-results-1_yp59d390790ee6e {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 15px;
+  color: #38595E;
+}
+/*
+  Style for results that are displayed on columns
+  ..................................
+*/
+li.yop-poll-li-answer-1_yp59d390790ee6e {
+  float: left;
+  display: inline-block;
+  width: 100%;
+  padding: 1%;
+  margin: 1%;
+}
+
+#yop-poll-vote-1_yp59d390790ee6e div#yop-poll-results-1_yp59d390790ee6e {
+  float: right;
+  width: auto;
+}
+#yop-poll-vote-1_yp59d390790ee6e div#yop-poll-results-1_yp59d390790ee6e a {
+  color:#000;
+  text-decoration:underline;
+  font-size:12px;
+}
+#yop-poll-vote-1_yp59d390790ee6e div#yop-poll-back-1_yp59d390790ee6e a {
+  color:#000;
+  text-decoration:underline;
+  font-size:12px;
+}
+#yop-poll-vote-1_yp59d390790ee6e div#yop-poll-archive-1_yp59d390790ee6e a {
+  color:#000;
+  text-decoration:underline;
+  font-size:12px;
+}
+#yop-poll-vote-1_yp59d390790ee6e div {
+  float:left;
+  width:100%;
+}
+/*
+  Result Bar
+  ..................................
+*/
+
+.yop-poll-results-bar-1_yp59d390790ee6e div { background:#555; width:90%;}
+
+
+/*
+  ---------------------------------------------------------------------------
+  EXTRAS
+  ---------------------------------------------------------------------------
+*/
+/*
+  CAPTCHA
+  ..................................
+*/
+#yop-poll-captcha-input-div-1_yp59d390790ee6e { margin-top:5px; }
+#yop-poll-captcha-helpers-div-1_yp59d390790ee6e {
+  width:30px;
+  float:left;
+  margin-left:5px;
+  height:0px;
+}
+#yop-poll-captcha-helpers-div-1_yp59d390790ee6e img { margin-bottom:2px; }
+#yop-poll-captcha-image-div-1_yp59d390790ee6e { margin-bottom:5px; }
+#yop_poll_captcha_image_1_yp59d390790ee6e { float:left; }
+
+.yop-poll-clear-1_yp59d390790ee6e { clear:both; }
+
+.yop-poll-name-1_yp59d390790ee6e { color:#38595E; font-size: 18px; }
+
+
+.yop-poll-li-answer-1_yp59d390790ee6e label  img     { max-width: 98%; }
+.yop-poll-li-result-1_yp59d390790ee6e label span img { max-width: 98%; }
+
+.content { position :unset !important; }
+
+div.yop-poll-container br,
+div#yop-poll-container-1_yp59d390790ee6e br { display: none; }
+
+div#yop_poll_vote_options_div-1_yp59d390790ee6e div:nth-last-of-type(1) { display: none; }#yop-poll-container-1_yp59d390790ee6e img {
+    max-width: 200px;
+} .yop-poll-forms-display{}</style><div id="yop-poll-container-1_yp59d390790ee6e" class="yop-poll-container"><div id="yop-poll-container-success-1_yp59d390790ee6e" class="yop-poll-container-success"></div><div id="yop-poll-container-error-1_yp59d390790ee6e" class="yop-poll-container-error"></div><form id="yop-poll-form-1_yp59d390790ee6e" class="yop-poll-forms yop-poll-forms-display"><div id = "yop-poll-questions-container-1_yp59d390790ee6e">
+	
+	<div id = "yop-poll-question-container-1_yp59d390790ee6e-1" class = "yop-poll-question-container-1_yp59d390790ee6e">
+		<div id = "yop-poll-question-1_yp59d390790ee6e-1"
+             class = "yop-poll-question-1_yp59d390790ee6e">Ngôn ngữ lập trình bạn đang sử dụng là gì :</div>
+		<div id = "yop-poll-answers-1_yp59d390790ee6e-1" class = "yop-poll-answers-1_yp59d390790ee6e">
+			<ul>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="1" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-1" /> <label for="yop-poll-answer-1_yp59d390790ee6e-1">Java</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="2" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-2" /> <label for="yop-poll-answer-1_yp59d390790ee6e-2">C</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="3" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-3" /> <label for="yop-poll-answer-1_yp59d390790ee6e-3">C++</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="4" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-4" /> <label for="yop-poll-answer-1_yp59d390790ee6e-4">C#</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="5" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-5" /> <label for="yop-poll-answer-1_yp59d390790ee6e-5">PHP</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="6" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-6" /> <label for="yop-poll-answer-1_yp59d390790ee6e-6">Javascript</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="7" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-7" /> <label for="yop-poll-answer-1_yp59d390790ee6e-7">Python</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="8" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-8" /> <label for="yop-poll-answer-1_yp59d390790ee6e-8">Perl</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="9" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-9" /> <label for="yop-poll-answer-1_yp59d390790ee6e-9">Ruby</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="10" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-10" /> <label for="yop-poll-answer-1_yp59d390790ee6e-10">Swift</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="11" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-11" /> <label for="yop-poll-answer-1_yp59d390790ee6e-11">Go</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="12" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-12" /> <label for="yop-poll-answer-1_yp59d390790ee6e-12">Passcal</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="13" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-13" /> <label for="yop-poll-answer-1_yp59d390790ee6e-13">Matlab</label>
+                    
+
+                    
+				</li>
+				
+				<li  class="yop-poll-li-answer-1_yp59d390790ee6e yop-poll-li-answer-1_yp59d390790ee6e-1">
+					<input type="radio" value="14" name="yop_poll_answer[1]" id="yop-poll-answer-1_yp59d390790ee6e-14" /> <label for="yop-poll-answer-1_yp59d390790ee6e-14">Visual Basic</label>
+                    
+
+                    
+				</li>
+				
+				
+			</ul>
+		</div>
+		<div  class = "yop-poll-customs-1_yp59d390790ee6e">
+			<ul>
+				
+			</ul>
+		</div>
+	</div>
+	<div class = "yop-poll-clear-1_yp59d390790ee6e"></div>
+	
+</div>
+
+<div id = "yop-poll-vote-1_yp59d390790ee6e" class = "yop-poll-footer">
+	<div><button class="yop_poll_vote_button" id="yop_poll_vote-button-1_yp59d390790ee6e" onclick="yop_poll_register_vote('1', 'widget', '_yp59d390790ee6e'); return false;">Vote</button></div>
+	<div id = "yop-poll-results-1_yp59d390790ee6e"><a href="javascript:void(0)" class="yop_poll_result_link" id="yop_poll_result_link1_yp59d390790ee6e" onClick="yop_poll_view_results('1', 'widget', '_yp59d390790ee6e')">View Results</a></div>
+	<div>Poll total answers: 62</div>   <div>Poll total votes: 62</div>
+</div><input type="hidden" id="yop-poll-tr-id-1_yp59d390790ee6e" name="yop_poll_tr_id" value=""/><input type="hidden" id="yop-poll-nonce-1_yp59d390790ee6e" name="yop-poll-nonce-1_yp59d390790ee6e" value="dc24c9d99c" /></form></div></div></aside></div>
+</div><!-- .mh-container-outer -->
+<footer class="mh-footer">
+	<div class="mh-container mh-container-inner mh-footer-widgets mh-row clearfix">
+					<div class="mh-col-1-4 mh-widget-col-1 mh-footer-area mh-footer-1">
+				<div id="text-12" class="mh-footer-widget widget_text">			<div class="textwidget"><p>Gmail: duc2521997@gmail.com<br />
+SĐT: 01676460699</p>
+</div>
+		</div>			</div>
+									</div>
+</footer>
+<div class="mh-copyright-wrap">
+	<div class="mh-container mh-container-inner clearfix">
+		<p class="mh-copyright">Copyright &copy; 2017 |  <a href="https://www.facebook.com/minhduc2521997" rel="nofollow">Minhduc</a></p>
+</div>
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px;top:100px;background-color:transparent;"><a class="a2a_button_facebook" href="https://www.addtoany.com/add_to/facebook?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Facebook" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_twitter" href="https://www.addtoany.com/add_to/twitter?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Twitter" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_facebook_messenger" href="https://www.addtoany.com/add_to/facebook_messenger?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Facebook Messenger" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_google_bookmarks" href="https://www.addtoany.com/add_to/google_bookmarks?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Google Bookmarks" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_hacker_news" href="https://www.addtoany.com/add_to/hacker_news?linkurl=http%3A%2F%2Ftechitvn.com%2Fhuong-dan-su-dung-api-smartcity%2F&amp;linkname=H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20s%E1%BB%AD%20d%E1%BB%A5ng%20api%20smartcity" title="Hacker News" rel="nofollow noopener" target="_blank"></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share"><img src="https://static.addtoany.com/buttons/share_16_16.png" alt="Share"></a></div>	<div id="wpcp-error-message" class="msgmsg-box-wpcp warning-wpcp hideme"><span>error: </span>Hãy tôn trọng tác giả, nói không với copy </div>
+	<script>
+	var timeout_result;
+	function show_wpcp_message(smessage)
+	{
+		if (smessage !== "")
+			{
+			var smessage_text = '<span>Alert: </span>'+smessage;
+			document.getElementById("wpcp-error-message").innerHTML = smessage_text;
+			document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp showme";
+			clearTimeout(timeout_result);
+			timeout_result = setTimeout(hide_message, 3000);
+			}
+	}
+	function hide_message()
+	{
+		document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp hideme";
+	}
+	</script>
+	<style type="text/css">
+	#wpcp-error-message {
+	    direction: ltr;
+	    text-align: center;
+	    transition: opacity 900ms ease 0s;
+	    z-index: 99999999;
+	}
+	.hideme {
+    	opacity:0;
+    	visibility: hidden;
+	}
+	.showme {
+    	opacity:1;
+    	visibility: visible;
+	}
+	.msgmsg-box-wpcp {
+		border-radius: 10px;
+		color: #555;
+		font-family: Tahoma;
+		font-size: 11px;
+		margin: 10px;
+		padding: 10px 36px;
+		position: fixed;
+		width: 255px;
+		top: 50%;
+  		left: 50%;
+  		margin-top: -10px;
+  		margin-left: -130px;
+  		-webkit-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+		-moz-box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+		box-shadow: 0px 0px 34px 2px rgba(242,191,191,1);
+	}
+	.msgmsg-box-wpcp span {
+		font-weight:bold;
+		text-transform:uppercase;
+	}
+	.error-wpcp {		background:#ffecec url('http://techitvn.com/wp-content/plugins/wp-content-copy-protector/images/error.png') no-repeat 10px 50%;
+		border:1px solid #f5aca6;
+	}
+	.success {
+		background:#e9ffd9 url('http://techitvn.com/wp-content/plugins/wp-content-copy-protector/images/success.png') no-repeat 10px 50%;
+		border:1px solid #a6ca8a;
+	}
+	.warning-wpcp {
+		background:#ffecec url('http://techitvn.com/wp-content/plugins/wp-content-copy-protector/images/warning.png') no-repeat 10px 50%;
+		border:1px solid #f5aca6;
+	}
+	.notice {
+		background:#e3f7fc url('http://techitvn.com/wp-content/plugins/wp-content-copy-protector/images/notice.png') no-repeat 10px 50%;
+		border:1px solid #8ed9f6;
+	}
+    </style>
+<link rel='stylesheet' id='yop-poll-public-css'  href='http://techitvn.com/wp-content/plugins/yop-poll/css/yop-poll-public.css?ver=5.8.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/simple-share-buttons-adder/js/ssba.min.js?ver=4.8.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JQLBSettings = {"fitToScreen":"1","resizeSpeed":"100","displayDownloadLink":"0","navbarOnTop":"1","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"80","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"http:\/\/techitvn.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"http:\/\/techitvn.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"http:\/\/techitvn.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js?ver=1.3.4.1'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/yop-poll-supercookie.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/super-cookie/superCookie-min.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/super-cookie/swfobject/swfobject.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/jquery.popupWindow.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-admin/admin-ajax.php?action=yop_poll_load_js&#038;id=1&#038;location=widget&#038;unique_id=_yp59d390790ee6e&#038;ver=5.8.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var yop_poll_public_config_general = {"ajax":{"url":"http:\/\/techitvn.com\/wp-admin\/admin-ajax.php","vote_action":"yop_poll_do_vote","yop_poll_show_vote_options":"yop_poll_show_vote_options","captcha_action":"yop_poll_show_captcha","view_results_action":"yop_poll_view_results","back_to_vote_action":"yop_poll_back_to_vote","is_wordpress_user_action":"yop_poll_is_wordpress_user","is_facebook_user_action":"yop_poll_is_facebook_user"},"pro":[],"yop_poll_version":"5.8.2","vote_with_wordpress_login_url":"http:\/\/techitvn.com\/wp-login.php?redirect_to=http%3A%2F%2Ftechitvn.com%2Fwp-admin%2Fadmin-ajax.php%3Faction%3Dyop_poll_set_wordpress_vote","vote_with_facebook_ajax_url":"http:\/\/techitvn.com\/wp-admin\/admin-ajax.php?action=yop_poll_set_facebook_vote"};
+var yop_poll_public_config_1_yp59d390790ee6e = {"poll_options":{"vote_permisions":["guest"],"vote_permisions_facebook_label":"Vote as Facebook User","vote_permisions_wordpress_label":"Vote as Wordpress User","vote_permisions_anonymous_label":"Vote as Anonymous User","vote_permisions_types":3,"share_after_vote":false,"share_name":false,"share_caption":false,"share_description":false,"share_picture":false,"share_link":"http:\/\/techitvn.com","redirect_after_vote":"no","redirect_after_vote_url":""},"loading_image_src":"http:\/\/techitvn.com\/wp-content\/plugins\/yop-poll\/images\/loading36x36.gif","loading_image_alt":"Loading"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/yop-poll-public.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/yop-poll-json2.js?ver=5.8.2'></script>
+<script type='text/javascript' src='http://techitvn.com/wp-content/plugins/yop-poll/js/yop-poll-jquery.base64.min.js?ver=5.8.2'></script>
+</body>
+</html>

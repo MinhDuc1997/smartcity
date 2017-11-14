@@ -1,0 +1,7 @@
+[03-Oct-2017 13:14:31 UTC] PHP Notice:  Undefined index: name in /home/techitvn/public_html/smartcity/api/userlogin.php on line 8
+[03-Oct-2017 13:14:31 UTC] PHP Notice:  Undefined index: password in /home/techitvn/public_html/smartcity/api/userlogin.php on line 9
+[03-Oct-2017 13:14:48 UTC] PHP Notice:  Undefined index: name in /home/techitvn/public_html/smartcity/api/userlogin.php on line 8
+[03-Oct-2017 13:14:48 UTC] PHP Notice:  Undefined index: password in /home/techitvn/public_html/smartcity/api/userlogin.php on line 9
+[03-Oct-2017 13:16:17 UTC] PHP Warning:  mysqli::query(): Empty query in /home/techitvn/public_html/smartcity/api/class/class.php on line 135
+[04-Oct-2017 11:16:56 UTC] PHP Notice:  Undefined index: name in /home/techitvn/public_html/smartcity/api/userlogin.php on line 8
+[04-Oct-2017 11:16:56 UTC] PHP Notice:  Undefined index: password in /home/techitvn/public_html/smartcity/api/userlogin.php on line 9
